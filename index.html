@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Group API Documentation</title.
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="index.html" class="logo">My Portfolio</a>
-                <ul class="nav-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="skills-projects.html">Skills & Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <main class="hero">
-        <section class="intro">
-            <div class="profile-container">
-            <img src="profile.jpeg" alt="profile" class="profile-photo">
-            </div>
-            <h1>Welcome to Aliyah's Graduate Portfolio</h1>
-            <p>Explore my skills, projects, and professional journey!</p>
-        </section>
-    </main>
+  <h1>Group API Documentation</h1>
+  <p>This page lists all available API endpoints for our extension repository platform.</p>
+
+  <div class="endpoint"><span class="method GET">GET</span><code>/repository/metadata</code><br>Returns all extension metadata</div>
+
+  <div class="endpoint"><span class="method GET">GET</span><code>/repository/extensions/{id}/{version}</code><br>Downloads an extension file</div>
+
+  <div class="endpoint"><span class="method POST">POST</span><code>/extensions</code><br>Uploads a new extension</div>
+
+  <div class="endpoint"><span class="method GET">GET</span><code>/extensions</code><br>Returns metadata for a single extension</div>
+
+  <div class="endpoint"><span class="method PUT">PUT</span><code>/extensions</code><br>Updates an extension’s details</div>
+
+  <div class="endpoint"><span class="method DELETE">DELETE</span><code>/extensions</code><br>Deletes an extension</div>
+
+  <div class="endpoint"><span class="method POST">POST</span><code>/extensions/{id}/flags</code><br>Flags an extension as inappropriate</div>
+
+  <div class="endpoint"><span class="method POST">POST</span><code>/auth/register</code><br>Registers a new user</div>
+
+  <div class="endpoint"><span class="method POST">POST</span><code>/auth/login</code><br>Authenticates a user</div>
+
+  <div class="endpoint"><span class="method GET">GET</span><code>/searchExtensions/{searchQuery}/{tags}</code><br>Searches for matching extensions</div>
+
+  <div class="endpoint"><span class="method PUT">PUT</span><code>/Extension/SanitizeExtension</code><br>
+    Validates extension metadata and format.<br>
+    (Checks that all required fields are present and correctly formatted, and sanitizes harmful content.)
+  </div>
+    
+  <div class="endpoint"><span class="method GET">GET</span><code>/extensions</code><br>Searches a version of extensions</div>
+
     <footer class="footer">
-        <p>&copy; 2025 Portfolio. All rights reserved.</p>
+        <p>&copy; Web Services - Assignment 3 </p>
     </footer>
+   
     <script src="script.js"></script>
+
+    
 </body>
 </html>
